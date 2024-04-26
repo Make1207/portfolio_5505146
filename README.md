@@ -1,5 +1,5 @@
 # portfolio_5505146
-Portfolio_for_GUI
+## Portfolio von Marcel Kempel
 
 -zur Installation:
 zur Installation kann man sich an das Tutorial unter dem folgenden Link halten: "https://www.flutter.de/artikel/flutter-auf-windows-mac-oder-linux-installieren"
