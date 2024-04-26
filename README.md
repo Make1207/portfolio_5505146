@@ -22,5 +22,5 @@ die "Flutter" und "Dart" Extensions für visualstudiocode dowloaden und man ist 
 
 ## Projekt:
 Das Projekt ist eine Demo die automatisch bei der erstellung eines neuen Dart Projekts erstellt wird.
-Das Projekt an sich hat in der unten rechten Ecke einen Button und in der Mitte eine Textausgabe.
+Das Projekt hat in der unten rechten Ecke einen Button und in der Mitte eine Textausgabe.
 Bei Klick auf den Button erhöht sich die Anzahl der Klicks in der Textausgabe.
