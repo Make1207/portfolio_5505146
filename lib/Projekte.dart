@@ -1,8 +1,28 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const PortfolioApp());
+class KontaktinformationenPage extends StatelessWidget {
+  const KontaktinformationenPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Projekte'),
+        backgroundColor: const Color.fromARGB(255, 128, 186, 36),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      body: const Center(
+        child: Text('Work in Progress...'),
+      ),
+    );
+  }
 }
+
 
 class PortfolioApp extends StatelessWidget {
   const PortfolioApp({super.key});
@@ -264,5 +284,6 @@ class Fusszeile extends StatelessWidget {
         ],
       ),
     );
-  }
 }
+  }
+

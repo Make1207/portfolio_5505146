@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Projekte.dart';
 
 void main() {
   runApp(const PortfolioApp());
@@ -12,7 +13,8 @@ class PortfolioApp extends StatelessWidget {
     return MaterialApp(
       title: "Portfolio von Marcel Kempel",
       theme: ThemeData(
-          scaffoldBackgroundColor: const Color.fromARGB(100, 215, 215, 215)),
+        scaffoldBackgroundColor: const Color.fromARGB(100, 215, 215, 215),
+      ),
       home: const PortfolioPage(),
       debugShowCheckedModeBanner: false,
     );
@@ -28,6 +30,21 @@ class PortfolioPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Portfolio"),
         backgroundColor: const Color.fromARGB(255, 128, 186, 36),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const KontaktinformationenPage()),
+              );
+            },
+            child: const Text(
+              'Projekte',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        ],
       ),
       body: const SingleChildScrollView(
         child: Column(
@@ -134,7 +151,6 @@ class Lebenslauf extends StatelessWidget {
 
 class ExperienceItem extends StatelessWidget {
   final String title;
-
   final String description;
 
   const ExperienceItem(
@@ -157,25 +173,6 @@ class ExperienceItem extends StatelessWidget {
             style: const TextStyle(fontSize: 16),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class EducationItem extends StatelessWidget {
-  final String title;
-
-  const EducationItem({
-    super.key,
-    required this.title,
-  });
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [],
       ),
     );
   }
