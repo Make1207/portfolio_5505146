@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Projekte.dart';
-import 'Kontakt.dart'; // Import the Kontakt page
+import 'Kontakt.dart'; 
 
 void main() {
   runApp(const PortfolioApp());
@@ -41,7 +41,8 @@ class PortfolioPage extends StatelessWidget {
             },
             child: const Text(
               'Projekte',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white,
+              fontSize: 20),
             ),
           ),
         ],
@@ -53,7 +54,7 @@ class PortfolioPage extends StatelessWidget {
             UeberMich(),
             Lebenslauf(),
             Faehigkeiten(),
-            KontaktButton(), // Add this line
+            KontaktButton(), 
             Fusszeile(),
           ],
         ),
@@ -75,7 +76,7 @@ class Ueberschrift extends StatelessWidget {
           CircleAvatar(
             radius: 50,
             backgroundImage: NetworkImage(
-                "https://www.museumize.com/cdn/shop/products/42d69af387d6044850ae79ca5e5acb5d_1024x1024@2x.jpg?v=1582156263"),
+                "https://www.museumize.com/cdn/shop/products/42d69af387d6044850ae79ca5e5acb5d_1024x1024@2x.jpg?v=1582156263"), //Platzhalter
           ),
           SizedBox(height: 10),
           Text(
@@ -224,7 +225,7 @@ class SkillChip extends StatelessWidget {
   }
 }
 
-// New widget for Kontakt button
+
 class KontaktButton extends StatelessWidget {
   const KontaktButton({super.key});
 
@@ -242,7 +243,9 @@ class KontaktButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color.fromARGB(255, 128, 186, 36),
         ),
-        child: const Text('Kontaktformular'),
+        child: const Text('Kontaktformular',
+        style: TextStyle(color: Colors.white,
+        fontSize: 20,),),
         
       ),
     );
