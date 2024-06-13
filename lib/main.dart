@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Projekte.dart';
+import 'Kontakt.dart'; // Import the Kontakt page
 
 void main() {
   runApp(const PortfolioApp());
@@ -35,8 +36,7 @@ class PortfolioPage extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                    builder: (context) => const KontaktinformationenPage()),
+                MaterialPageRoute(builder: (context) => const Projekte()),
               );
             },
             child: const Text(
@@ -53,6 +53,7 @@ class PortfolioPage extends StatelessWidget {
             UeberMich(),
             Lebenslauf(),
             Faehigkeiten(),
+            KontaktButton(), // Add this line
             Fusszeile(),
           ],
         ),
@@ -223,6 +224,31 @@ class SkillChip extends StatelessWidget {
   }
 }
 
+// New widget for Kontakt button
+class KontaktButton extends StatelessWidget {
+  const KontaktButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: ElevatedButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const Kontakt()),
+          );
+        },
+        style: ElevatedButton.styleFrom(
+          backgroundColor: const Color.fromARGB(255, 128, 186, 36),
+        ),
+        child: const Text('Kontaktformular'),
+        
+      ),
+    );
+  }
+}
+
 class Fusszeile extends StatelessWidget {
   const Fusszeile({super.key});
 
@@ -239,7 +265,7 @@ class Fusszeile extends StatelessWidget {
           ),
           const Text(
             'Contact me:',
-            style: TextStyle(color: Colors.white70),
+            style: TextStyle(color: Colors.white),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
