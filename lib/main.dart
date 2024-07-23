@@ -75,8 +75,8 @@ class Ueberschrift extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 50,
-            backgroundImage: NetworkImage(
-                "https://www.museumize.com/cdn/shop/products/42d69af387d6044850ae79ca5e5acb5d_1024x1024@2x.jpg?v=1582156263"), //Platzhalter
+            backgroundImage:AssetImage(
+                "images/profilePic.jpg"), //Platzhalter
           ),
           SizedBox(height: 10),
           Text(
